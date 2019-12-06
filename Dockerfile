@@ -15,9 +15,8 @@ EXPOSE 8080
 ADD run-httpd.sh /run-httpd.sh
 RUN chmod -v +x /run-httpd.sh
 
-RUN \
-  chgrp -R 0 /run/httpd && \
-  chmod -R g=u /run/httpd
+RUN chgrp -R 0 /run/httpd /etc/httpd/logs && \
+  chmod -R g=u /run/httpd /etc/httpd/logs
 
 USER 1001
 

@@ -7,7 +7,7 @@ LABEL Vendor="CentOS" \
 RUN \
   mkdir -p /run/httpd && \
   chgrp -R 0 /run/httpd && \
-  chown -R g=u /run/httpd
+  chmod -R g=u /run/httpd
 USER 1001
 
 RUN yum -y --setopt=tsflags=nodocs update && \

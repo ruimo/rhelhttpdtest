@@ -4,7 +4,9 @@ LABEL Vendor="CentOS" \
       License=GPLv2 \
       Version=2.4.6-40
 
-RUN chgrp -R 0 /run/httpd && \
+RUN \
+  rm -rf /run/httpd && \
+  chgrp -R 0 /run/httpd && \
   chown g=u /run/httpd
 USER 1001
 

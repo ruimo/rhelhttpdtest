@@ -5,9 +5,8 @@ LABEL Vendor="CentOS" \
       Version=2.4.6-40
 
 RUN \
-  rm -rf /run/httpd && \
   chgrp -R 0 /run/httpd && \
-  chown g=u /run/httpd
+  chown -R g=u /run/httpd
 USER 1001
 
 RUN yum -y --setopt=tsflags=nodocs update && \

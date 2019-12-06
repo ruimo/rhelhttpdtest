@@ -20,5 +20,5 @@ RUN \
 
 USER 1001
 
-#CMD ["/run-httpd.sh"]
-CMD ["bash", "-c", "sleep 1000000"]
+CMD ["/run-httpd.sh"]
+#CMD ["bash", "-c", "sleep 1000000"]

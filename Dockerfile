@@ -21,4 +21,5 @@ RUN chmod -v +x /run-httpd.sh
 
 USER 1001
 
-CMD ["/run-httpd.sh"]
+#CMD ["/run-httpd.sh"]
+CMD ["sleep 1000000"]

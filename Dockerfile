@@ -4,6 +4,9 @@ LABEL Vendor="CentOS" \
       License=GPLv2 \
       Version=2.4.6-40
 
+RUN chgrp -R 0 /run/httpd && \
+  chown g=u /run/httpd
+USER 1001
 
 RUN yum -y --setopt=tsflags=nodocs update && \
     yum -y --setopt=tsflags=nodocs install httpd && \

@@ -5,6 +5,7 @@ LABEL Vendor="CentOS" \
       Version=2.4.6-40
 
 RUN \
+  mkdir -p /run/httpd && \
   chgrp -R 0 /run/httpd && \
   chown -R g=u /run/httpd
 USER 1001

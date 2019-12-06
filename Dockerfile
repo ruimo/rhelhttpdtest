@@ -8,7 +8,7 @@ RUN yum -y --setopt=tsflags=nodocs update && \
     yum -y --setopt=tsflags=nodocs install httpd && \
     yum clean all
 
-EXPOSE 80
+EXPOSE 8080
 
 # Simple startup script to avoid some issues observed with container restart
 ADD run-httpd.sh /run-httpd.sh
@@ -20,5 +20,5 @@ RUN \
 
 USER 1001
 
-CMD ["/run-httpd.sh"]
-#CMD ["bash", "-c", "sleep 1000000"]
+#CMD ["/run-httpd.sh"]
+CMD ["bash", "-c", "sleep 1000000"]
